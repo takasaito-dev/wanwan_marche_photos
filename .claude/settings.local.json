@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(open index.html)",
+      "Bash(pip install:*)",
+      "Bash(python3 add_photos.py add_photos:*)",
+      "Bash(open \"event.html?eventId=20250720-tsurutalabo\")",
+      "Bash(open cart.html)",
+      "Bash(git init:*)"
+    ],
+    "deny": []
+  }
+}

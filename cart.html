@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カート - わんわんマルシェ写真販売</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1><a href="index.html">わんわんマルシェ写真販売</a></h1>
+            <div class="nav-links">
+                <a href="purchase-guide.html" class="nav-link">
+                    購入方法
+                </a>
+                <a href="cart.html" class="cart-link active">
+                    カート (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="cart-header">
+            <h2>カート</h2>
+        </section>
+
+        <section id="cart-content">
+            <div id="cart-items">
+                <!-- Cart items will be populated here -->
+            </div>
+
+            <div id="empty-cart" class="empty-state" style="display: none;">
+                <p>カートに商品がありません</p>
+                <a href="index.html" class="btn primary">イベントを見る</a>
+            </div>
+
+            <div id="cart-summary" style="display: none;">
+                <div class="cart-total">
+                    <h3>合計金額</h3>
+                    <div class="total-line">
+                        <span>写真 <span id="total-count">0</span>枚</span>
+                        <span>¥<span id="total-amount">0</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="order-form-section" style="display: none;">
+                <h3>注文情報</h3>
+                <form id="order-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-last-name">姓 *</label>
+                            <input type="text" id="customer-last-name" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-first-name">名 *</label>
+                            <input type="text" id="customer-first-name" name="firstName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">メールアドレス *</label>
+                        <input type="email" id="customer-email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">電話番号 *</label>
+                        <input type="tel" id="customer-phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="payment-method">お支払い方法 *</label>
+                        <select id="payment-method" name="paymentMethod" required>
+                            <option value="">選択してください</option>
+                            <option value="PayPay">PayPay</option>
+                            <option value="銀行振込">銀行振込</option>
+                        </select>
+                        <small class="form-note">※ご注文後、1週間以内にお支払いをお願いいたします。</small>
+                    </div>
+
+                    <div class="form-note" style="margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #007bff; border-radius: 4px;">
+                        <p style="margin: 0; font-size: 14px; color: #495057;">
+                            <strong>ご注文の流れ：</strong><br>
+                            「注文を確定」ボタンを押すと、ご利用のメールアプリが開きます。<br>
+                            開いたメールアプリから注文内容を送信してください。
+                        </p>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">注文を確定</button>
+                        <button type="button" id="clear-cart-btn" class="btn secondary">カートをクリア</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="thank-you-section" class="thank-you" style="display: none;">
+            <h2>メールアプリを確認してください</h2>
+            <div style="margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #28a745; border-radius: 4px;">
+                <p style="margin: 0; font-size: 14px; color: #495057;">
+                    <strong>次のステップ：</strong><br>
+                    1. 開いたメールアプリから注文内容を送信してください<br>
+                    2. 送信完了後、ご注文が確定されます<br>
+                    3. 確認のメールを送らせていただきます
+                </p>
+            </div>
+            <a href="index.html" class="btn primary">トップページに戻る</a>
+        </section>
+    </main>
+
+    <script type="module" src="scripts/cart.js"></script>
+</body>
+</html>

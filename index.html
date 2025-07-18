@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わんわんマルシェ写真販売</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>わんわんマルシェ写真販売</h1>
+            <div class="nav-links">
+                <a href="purchase-guide.html" class="nav-link">
+                    購入方法
+                </a>
+                <a href="cart.html" class="cart-link">
+                    カート (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>イベント一覧</h2>
+            <p>お気に入りの写真を見つけてください</p>
+        </section>
+
+        <section class="events-grid" id="events-grid">
+            <!-- Event cards will be populated here -->
+        </section>
+    </main>
+
+    <script type="module" src="scripts/index.js"></script>
+</body>
+</html>

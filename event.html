@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イベント写真 - わんわんマルシェ写真販売</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1><a href="index.html">わんわんマルシェ写真販売</a></h1>
+            <div class="nav-links">
+                <a href="purchase-guide.html" class="nav-link">
+                    購入方法
+                </a>
+                <a href="cart.html" class="cart-link">
+                    カート (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="event-header">
+            <h2 id="event-title">イベント写真</h2>
+            <div class="event-controls">
+                <button id="select-all-btn" class="btn secondary">全選択</button>
+                <button id="deselect-all-btn" class="btn secondary">全解除</button>
+                <button id="add-to-cart-btn" class="btn primary" disabled>
+                    カートに追加 (<span id="selected-count">0</span>)
+                </button>
+            </div>
+        </section>
+
+        <section class="photos-grid" id="photos-grid">
+            <!-- Photo thumbnails will be populated here -->
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="閉じる">&times;</button>
+            <img id="lightbox-image" src="" alt="">
+            <div class="modal-nav">
+                <button id="prev-btn" class="btn secondary" aria-label="前の写真">前へ</button>
+                <span id="photo-counter">1 / 10</span>
+                <button id="next-btn" class="btn secondary" aria-label="次の写真">次へ</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/event.js"></script>
+</body>
+</html>
